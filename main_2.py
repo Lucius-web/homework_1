@@ -13,7 +13,7 @@ async def start(message: Message):
 
 @dp.message(Command('help'))
 async def help(message: Message):
-  await message.reply("что-бы запустить напишите я готов")
+  await message.reply("что-бы запустить напишите Я готов чтобы начать вашу игру")
 
 @dp.message(F.text.lower() == 'Я готов')
 async def start_random(message : Message):
