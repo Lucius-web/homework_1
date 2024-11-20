@@ -1,13 +1,13 @@
-from aiogram.types import ReplyKeyboardMarkup, KeyboardButton, InlineKeyboardButton, InlineKeyboardMarkup
+from aiogram.types import ReplyKeyboardMarkup, KeyboardButton,KeyboardButton
 
 
 main = ReplyKeyboardMarkup(keyboard=[
-  [KeyboardButton(text ="О нас")],
-  [KeyboardButton(text ="Направления")], [KeyboardButton(text = "Контакты")]
+  [KeyboardButton(text="Lining")],
+  [KeyboardButton(text="Nike")], [KeyboardButton(text="Sajda")]
 ])
 
-setting = InlineKeyboardMarkup(inline_keyboard=[
-  [InlineKeyboardButton(text="Backend", callback_data="backend_info")],
-  [InlineKeyboardButton(text="Frontend", callback_data="frontend_info")],
-  [InlineKeyboardButton(text="UX/UI", callback_data="ux_ui_info")]
-])
+# setting = KeyboardMarkup(Reply_keyboard=[
+#   [KeyboardButton(text="Lining", callback_data="Liniginfo")],
+#   [KeyboardButton(text="Nike", callback_data="Nike_info")],
+#   [KeyboardButton(text="Sajda", callback_data="Sajda_info")]
+# ])
