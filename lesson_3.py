@@ -27,18 +27,18 @@ async def direction(message: Message):
 async def contacts(message: Message):
     await message.answer('@geeks_osh\n+996 559 006484\nБексултан Сулайманов')
     
-@dp.callback_query(F.data == 'backend_info')
+@dp.callback_query(F.data == 'Lining_info')
 async def backend_info(query):
     await query.message.answer('''это внутренняя часть сайта и т.д. 
 Стоимость: 12000 сом в месяц. 
 Обучение: 5 месяц''')
-@dp.callback_query(F.data == 'frontend_info')
+@dp.callback_query(F.data == 'Nike_info')
 async def frontend_info(query):
     await query.message.answer('''это внешняя часть сайта и т.д.
     Стоимость: 12000 сом в месяц. 
-Обучение: 5 месяц''')
+    Обучение: 5 месяц''')
 
-@dp.callback_query(F.data == 'ux_ui_info')
+@dp.callback_query(F.data == 'Sajda_info')
 async def ux_ui_info(query):
     await query.message.answer('''это дизайнерская часть сайта и т.д.
     Стоимость: 12000 сом в месяц. 
