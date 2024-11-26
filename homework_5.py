@@ -5,13 +5,14 @@ from aiogram.fsm.context import FSMContext
 from aiogram.fsm.state import State, StatesGroup
 from aiogram.fsm.storage.memory import MemoryStorage
 import sqlite3
+import asyncio
 import logging
+from config import token
 
 logging.basicConfig(level=logging.INFO)
 
-API_TOKEN = "7554813918:AAFn7_1X_eT94BeYTFtUrHR7vZERnExGyl0"
 
-bot = Bot(token=API_TOKEN)
+bot = Bot(token=token)
 dp = Dispatcher(storage=MemoryStorage())
 
 conn = sqlite3.connect("bank_bot.db")
@@ -163,5 +164,4 @@ async def handle_error(update: types.Update, exception: Exception):
     return True
 
 if __name__ == "__main__":
-    import asyncio
     asyncio.run(dp.start_polling(bot))
