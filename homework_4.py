@@ -72,6 +72,7 @@ async def handle_task_text(message: types.Message):
     if adding_task and adding_task[0] == 1:
         
         task_text = message.text
+
         db_cursor.execute("INSERT INTO tasks (user_id, task_text) VALUES (?, ?)", (user_id, task_text))
         db_cursor.execute("UPDATE users SET adding_task = 0 WHERE id = ?", (user_id,))
         db_conn.commit()
@@ -108,8 +109,7 @@ async def clear_list(message: types.Message):
     await message.answer("Вы уверены, что хотите очистить список задач?", reply_markup=confirm_kb)
 
 
-
-@router.callback_query(F.data.startswith("clear:"))
+router.callback_query(F.data.startswith("clear:"))
 async def clear_tasks_callback(callback: types.CallbackQuery):
     user_id = callback.from_user.id
     action = callback.data.split(":")[1]
