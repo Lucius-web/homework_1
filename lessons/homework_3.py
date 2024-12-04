@@ -5,7 +5,7 @@ import asyncio
 from aiogram import types
 import keyboard as kb
 
-from config import token
+from lessons.config import token
 
 bot = Bot(token=token)
 dp = Dispatcher()

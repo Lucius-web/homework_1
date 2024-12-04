@@ -3,7 +3,7 @@ from aiogram import Bot, Dispatcher, Router, types
 from aiogram.types import ReplyKeyboardMarkup, KeyboardButton, InlineKeyboardMarkup, InlineKeyboardButton
 from aiogram.filters import Command
 from aiogram import F
-from config import token
+from lessons.config import token
 
 
 bot = Bot(token=token)

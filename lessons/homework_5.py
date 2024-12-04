@@ -7,7 +7,7 @@ from aiogram.fsm.storage.memory import MemoryStorage
 import sqlite3
 import asyncio
 import logging
-from config import token
+from lessons.config import token
 
 logging.basicConfig(level=logging.INFO)
 
@@ -165,3 +165,8 @@ async def handle_error(update: types.Update, exception: Exception):
 
 if __name__ == "__main__":
     asyncio.run(dp.start_polling(bot))
+
+#    FSMContext в Python — это объект из библиотеки aiogram, который используется для управления состояниями в ботах для Telegram.
+# С его помощью можно сохранять данные и обращаться к ним в обработчиках сообщений.
+
+# Модуль в Python — это отдельный файл с кодом, который можно повторно использовать в других программах
